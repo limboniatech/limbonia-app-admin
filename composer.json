@@ -1,6 +1,6 @@
 {
-    "name": "limboniatech/limbonia-app-base",
-    "description": "This is the Limbonia App Base Library",
+    "name": "limboniatech/limbonia-app-admin",
+    "description": "This is the Limbonia Admin App Library",
     "type": "library",
     "license": "BSD-3-Clause",
     "authors": [
