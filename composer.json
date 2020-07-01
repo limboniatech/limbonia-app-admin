@@ -12,12 +12,7 @@
     "require": {
         "php": "^7.2",
         "limboniatech/limbonia-loader": "dev-master",
-        "limboniatech/limbonia-base": "dev-master",
-        "limboniatech/limbonia-email": "dev-master",
-        "limboniatech/limbonia-session-manager": "dev-master",
-        "limboniatech/limbonia-tag": "dev-master",
-        "limboniatech/limbonia-result": "dev-master",
-        "limboniatech/limbonia-database": "dev-master"
+        "limboniatech/limbonia-web": "dev-master"
     },
     "autoload": {
         "psr-4": {
