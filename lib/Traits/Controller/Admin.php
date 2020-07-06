@@ -939,8 +939,8 @@ trait Admin
   /**
    * Return the HTML needed to display the specified edit dialog box
    *
-   * @param type $sText
-   * @param type $sButtonName
+   * @param string $sText
+   * @param string $sButtonName
    * @return string
    */
   protected function editDialog($sText, $sButtonName)
