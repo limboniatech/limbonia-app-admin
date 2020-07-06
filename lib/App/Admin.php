@@ -52,7 +52,7 @@ class Admin extends \Limbonia\App\Web
   /**
    * Generate and return the current user
    *
-   * @return \Limbonia\Model\User
+   * @return \Limbonia\Interfaces\Model\User
    * @throws \Exception
    */
   protected function generateUser()
