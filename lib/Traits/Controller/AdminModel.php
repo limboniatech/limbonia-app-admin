@@ -9,8 +9,21 @@ namespace Limbonia\Traits\Controller;
  * @author Lonnie Blansett <lonnie@limbonia.tech>
  * @package Limbonia
  */
-trait Model
+trait AdminModel
 {
+  /**
+   * Initialize this controller's custom data, if there is any
+   *
+   * @throws \Limbonia\Exception
+   */
+  protected function adminModelinit()
+  {
+    if ($this->oModel->id > 0)
+    {
+      $this->hMenuItems['model'] = 'Model';
+      $this->aAllowedActions[] = 'model';
+    }
+  }
 
   /**
    * List of column names in the order required
