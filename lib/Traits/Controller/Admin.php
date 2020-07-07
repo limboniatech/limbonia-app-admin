@@ -124,17 +124,9 @@ trait Admin
 
   /**
    * Instantiate a controller
-   *
-   * @param \Limbonia\App $oApp
    */
-  protected function adminConstruct(\Limbonia\App $oApp, \Limbonia\Router $oRouter = null)
+  protected function adminConstruct()
   {
-    if (!empty($this->hSettings))
-    {
-      $this->hMenuItems['settings'] = 'Settings';
-      $this->aAllowedActions[] = 'settings';
-    }
-
     $this->sCurrentAction = in_array($this->oRouter->action, $this->aAllowedActions) ? $this->oRouter->action : $this->sDefaultAction;
   }
 
@@ -146,26 +138,6 @@ trait Admin
   public function isSearch()
   {
     return in_array($this->oRouter->action, ['search', 'list']);
-  }
-
-  /**
-   * Process the posted settings for this controller ad save them
-   *
-   * @throws Exception
-   */
-  protected function prepareViewPostSettings()
-  {
-    if (!isset($this->oApp->post[$this->sType]))
-    {
-      throw new Exception('Nothing to save!');
-    }
-
-    foreach ($this->oApp->post[$this->sType] as $sKey => $sData)
-    {
-      $this->setSetting($sKey, $sData);
-    }
-
-    $this->saveSettings();
   }
 
   /**
