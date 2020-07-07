@@ -29,7 +29,7 @@ class Admin extends \Limbonia\App\Web
       return $this->viewRender('login');
     }
 
-    $sControllerDriver = \Limbonia\Controller::driver((string)$this->oRouter->controller);
+    $sControllerDriver = \Limbonia\Controller\Admin::driver((string)$this->oRouter->controller);
 
     if (empty($sControllerDriver))
     {
@@ -65,7 +65,7 @@ class Admin extends \Limbonia\App\Web
 
     foreach ($hControllerList as $sController)
     {
-      $sDriver = \Limbonia\Controller::driver($sController);
+      $sDriver = \Limbonia\Controller\Admin::driver($sController);
 
       if (empty($sDriver) || in_array($sDriver, $aBlackList) || !$oUser->hasResource($sDriver))
       {

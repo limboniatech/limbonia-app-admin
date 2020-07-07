@@ -9,7 +9,7 @@ namespace Limbonia\Controller;
  * @author Lonnie Blansett <lonnie@limbonia.tech>
  * @package Limbonia
  */
-class Admin extends Base implements \Limbonia\Interfaces\Controller\Admin
+class Admin extends \Limbonia\Controller implements \Limbonia\Interfaces\Controller\Admin
 {
   use \Limbonia\Traits\Controller\Admin;
   use \Limbonia\Traits\DriverList;
